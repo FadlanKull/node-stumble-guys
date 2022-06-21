@@ -25,12 +25,12 @@ const GoStumble = (code, auth) => new Promise((resolve, reject) => {
 
     console.log(`
 ███████ ████████ ██    ██ ███    ███ ██████  ██      ███████         
-██         ██    ██    ██ ████  ████ ██   ██ ██      ██           
+██         ██    ██ FADLAN KULL🥶🥶   ██ ████  ████ ██   ██ ██      ██           
 ███████    ██    ██    ██ ██ ████ ██ ██████  ██      █████          
      ██    ██    ██    ██ ██  ██  ██ ██   ██ ██      ██            
 ███████    ██     ██████  ██      ██ ██████  ███████ ███████    
 
-By : ${chalk.red('@dkmpostor')} - ${chalk.blue('https://dkmpostor.netlify.app/')}
+By : ${chalk.red('@dkmpostor & @FadlanKull')} - ${chalk.blue('https://sociabuzz.com/fadlana')}
 
 Features :
 
@@ -39,7 +39,7 @@ Features :
 `);
 
     const feature = rs.question('[+] Enter feature needed : ');
-    const auth = rs.question('[+] Enter your auth token : ');
+    const auth = rs.question('[+] Tempel Kode Auth : ');
     console.log('');
 
     if (feature == '1') {
@@ -50,7 +50,7 @@ Features :
             const result = await GoStumble(code, auth);
             if (!result) {
 
-                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Wrong cookie or Expired cookie !`));
+                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Kode Auth Anda Expired !`));
                 break;
 
             } else if (result.includes('User')) {
@@ -61,12 +61,12 @@ Features :
                 const trophy = data.User.SkillRating;
                 const crown = data.User.Crowns;
                 
-                console.log(chalk.green(`\r[ ${moment().format('HH:mm:ss')} ] Nickname : ${username} | Country : ${country} | ${chalk.blue(`Trophy : ${trophy}`)} | ${chalk.blue(`Crown : ${crown}`)}`));
+                console.log(chalk.green(`\r[ ${moment().format('HH:mm:ss')} ] Nama : ${username} | Country : ${country} | ${chalk.blue(`Trophy : ${trophy}`)} | ${chalk.green(`Crown : ${crown}`)}`));
                 
 
             } else if (result == 'BANNED') {
 
-                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Banned !`));
+                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Akun anda Kena band 😘😘!`));
                 break;
                 
             } else if (result == 'SERVER_ERROR') {
@@ -84,7 +84,7 @@ Features :
             const result = await GoStumble(code, auth);
             if (!result) {
 
-                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Wrong cookie or Expired cookie !`));
+                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Kode Auth Anda Sudah Expired !`));
                 break;
 
             } else if (result.includes('User')) {
@@ -94,11 +94,11 @@ Features :
                 const country = data.User.Country;
                 const trophy = data.User.SkillRating;
                 
-                console.log(chalk.green(`\r[ ${moment().format('HH:mm:ss')} ] Nickname : ${username} | Country : ${country} | ${chalk.blue(`Trophy : ${trophy}`)}`));
+                console.log(chalk.green(`\r[ ${moment().format('HH:mm:ss')} ] Nama : ${username} | Country : ${country} | ${chalk.blue(`Trophy : ${trophy}`)}`));
                 
             } else if (result == 'BANNED') {
 
-                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Banned !`));
+                console.log(chalk.red(`\r[ ${moment().format('HH:mm:ss')} ] Akun Anda Kena Band😘😘 !`));
                 break;
                 
             } else if (result == 'SERVER_ERROR') {
